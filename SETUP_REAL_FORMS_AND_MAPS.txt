@@ -1,0 +1,12 @@
+FLATBUSH TRANSPORTATION — REAL FULL-STACK SETUP
+
+This package includes real server-side form endpoints, private ID upload storage, D1 request records and server-side email.
+
+CONNECT ONCE:
+1) GOOGLE MAPS: enable Maps JavaScript API + Geocoding, put your browser key in public/config.js, restrict it to your domain.
+2) D1: create database flatbush-transportation, paste database_id into wrangler.toml, then run npm run db:apply.
+3) R2: create PRIVATE bucket flatbush-private-uploads. Do not make it public.
+4) RESEND: verify flatbushtransportation.com, create API key, set Cloudflare secret with: npx wrangler secret put RESEND_API_KEY. Verify forms@flatbushtransportation.com as sender.
+5) DEPLOY: npm install && npm run deploy.
+
+The forms then submit without opening the customer email app. Office email goes to Flatbushtransportation@gmail.com. Rental IDs upload privately to R2.
