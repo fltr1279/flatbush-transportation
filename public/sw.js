@@ -1,0 +1,1 @@
+const C='ft-massive-v1';self.addEventListener('install',()=>self.skipWaiting());self.addEventListener('activate',e=>e.waitUntil(self.clients.claim()));
